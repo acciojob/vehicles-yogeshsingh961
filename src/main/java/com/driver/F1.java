@@ -32,7 +32,7 @@ public class F1 extends Car {
         if (newSpeed > 0) {
             changeSpeed(newSpeed, this.getCurrentDirection());
             if (newSpeed > 0 && newSpeed <= 50) {
-                super.changeGear(1);// simply call changeGear no other same method in this class
+                changeGear(1);//  can call super.changeGeer
             } else if (newSpeed > 50 && newSpeed <= 100) {
                 changeGear(2);
             } else if (newSpeed > 100 && newSpeed <= 150) {
@@ -47,7 +47,10 @@ public class F1 extends Car {
     }
 
 
-
+//      if(newSpeed == 0) {
+//        //Stop the car, set gear as 1
+//
+//      }
 //        //for all other cases, change the gear accordingly
 //
 //        if(newSpeed > 0) {
